@@ -1,1 +1,7 @@
 /* CSS declarations go here */
+
+body {
+  padding-top: 60px;
+  /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+  background: #242424 !important;
+}

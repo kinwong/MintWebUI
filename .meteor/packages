@@ -19,7 +19,12 @@ ecmascript@0.5.8              # Enable ECMAScript2015+ syntax in app code
 
 autopublish@1.0.7             # Publish all data to the clients (for prototyping)
 insecure@1.0.7                # Allow all DB writes from clients (for prototyping)
+accounts-password
+accounts-ui
+
 mrt:bootstrap-3
+kadira:flow-router
+kadira:blaze-layout
 shell-server
 fortawesome:fontawesome
 
