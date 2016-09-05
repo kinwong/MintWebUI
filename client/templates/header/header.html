@@ -1,4 +1,9 @@
 <template name="header">
+	<!-- Design - Add Quick Draft -->
+	{{> productModal options=designQuickDraftOptions}}
+	{{> productModal options=designStockWarrantOptions}}
+	{{> productModal options=designIndexCBBCOptions}}
+
 	<div class="container">
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-header">
@@ -14,20 +19,22 @@
 	<div class="collapse navbar-collapse js-navbar-collapse">
 
 		<ul class="nav navbar-nav">
-			<li class="dropdown-dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
 					<i class="fa fa-pencil" aria-hidden="true"></i> Design <span class="caret"></span>
 				</a>				
 				<ul class="dropdown-menu">
 						<li class="dropdown-header">Product</li>
-						<li><a href="Draft">Quick Draft</a></li>
+						<li data-toggle="modal" data-target="#designQuickDraft"><a>Quick Draft</a></li>
+						
 						<li role="separator" class="divider"></li>
 						<li class="dropdown-header">Hong Kong Mint Products</li>
-						<li><a href="Draft">Stock Warrant</a></li>
-						<li><a href="Draft">Index CBBC</a></li>
-						<li><a href="Draft" class="disable">Stock CBBC</a></li>
+						<li data-toggle="modal" data-target="#designStockWarrant"><a>Stock Warrant</a></li>
+						<li data-toggle="modal" data-target="#designIndexCBBC"><a>Index CBBC</a></li>
+						<li data-toggle="modal" data-target="#designStockCBBC"><a>Stock CBBC</a></li>
+
 						<li role="separator" class="divider"></li>
-						<li><a role="button" href="Draft">Clone from Competitors</a></li>
+						<li data-toggle="modal" data-target="#designCloneFromCompetitors"> <a>Clone from Competitors</a></li>
 				</ul>				
 			</li>
       <li class="dropdown mega-dropdown">
@@ -38,8 +45,8 @@
     					<ul>
 							<li class="dropdown-header">Features</li>
 							<li><a href="#">Auto Carousel</a></li>
-                            <li><a href="#">Carousel Control</a></li>
-                            <li><a href="#">Left & Right Navigation</a></li>
+							<li><a href="#">Carousel Control</a></li>
+							<li><a href="#">Left & Right Navigation</a></li>
 							<li><a href="#">Four Columns Grid</a></li>
 							<li class="divider"></li>
 							<li class="dropdown-header">Fonts</li>

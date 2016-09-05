@@ -1,7 +1,7 @@
 <template name="workspace">
     <div class="panel-group">
-        {{#each productModel in products}}
-            {{> product product=productModel}}
+        {{#each product in products}}
+            {{> productCard product=product}}
         {{/each}}
     </div>
 </template>

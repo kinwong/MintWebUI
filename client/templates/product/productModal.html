@@ -1,0 +1,27 @@
+<!-- 
+  data context
+  name: options
+  id: the id of the modal
+
+  -->
+<template name="productModal">
+<div class="modal fade" id="{{options.id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog model-success" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </button>
+        <h5 class="modal-title" id="myModalLabel">{{options.title}}</h5>
+      </div>
+      <div class="modal-body">
+        {{> productForm}}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">{{options.defaultButtonText}}</button>
+        <button type="button" class="btn btn-primary">{{options.primaryButtonText}}</button>
+      </div>
+    </div>
+  </div>
+</div> <!-- end of AddQuickDraft -->
+</template>
